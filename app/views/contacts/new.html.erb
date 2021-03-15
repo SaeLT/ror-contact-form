@@ -1,0 +1,21 @@
+<h1>Enter your contact info</h1>
+
+<%= simple_form_for(@contact) do |f| %>
+  <%= f.input :name, label: 'Prénom', placeholder: "Jean" %>
+  <%= f.input :email, placeholder: "example@example.com" %>
+  <%= f.input :birthdate, label: 'Date de naissance', 
+                          as: :date, start_year: Date.today.year - 90,
+                          end_year: Date.today.year %>
+  <%= f.input :phone, label: 'Numéro de téléphone', placeholder: '0600000000' %>
+  <%= f.button :submit, "Envoyer" %>
+<% end %>
+
+<br />Contacts list
+<ul>
+  <% @contacts.each do |contact| %>
+    <li><%= contact.name %></li>
+    <li><%= contact.email %></li>
+    <li><%= contact.birthdate %></li>
+    <li><%= contact.phone %></li><br />
+  <% end %>
+</ul>
