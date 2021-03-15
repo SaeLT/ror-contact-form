@@ -1,25 +1,19 @@
 # README
+commandes :
+rails new ror-contact-form
+cd ror-contact-form
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+git init
+git commit -m "first commit"
+git branch -M main
+git remote add origin git@github.com:SaeLT/ror-contact-form.git
+git push -u origin main
 
-Things you may want to cover:
+rails g controller contacts
+rails g model Contact name:string email:string birthdate:date phone:string
 
-* Ruby version
+rake db:migrate
 
-* System dependencies
+bundle install
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 # ror-contact-form
