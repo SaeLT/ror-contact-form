@@ -1,6 +1,7 @@
-<h1>Enter your contact info</h1>
+<h1>Entrez vos informations de contact</h1>
 
 <%= simple_form_for(@contact) do |f| %>
+
   <%= f.input :name, label: 'Prénom', placeholder: "Jean" %>
   <%= f.input :email, placeholder: "example@example.com" %>
   <%= f.input :birthdate, label: 'Date de naissance', 
@@ -10,7 +11,7 @@
   <%= f.button :submit, "Envoyer" %>
 <% end %>
 
-<br />Contacts list
+<br />Liste des contacts
 <ul>
   <% @contacts.each do |contact| %>
     <li><%= contact.name %></li>
